@@ -1,4 +1,4 @@
-var draw_count=0;
+ï»¿var draw_count=0;
 function draw(is_started)
 {
 	if(is_started)
@@ -59,7 +59,7 @@ function draw(is_started)
 	c.fillStyle="rgb(0,0,0)";
 	c.textAlign="start";
 	c.textBaseline="top";
-	c.font="bold 20px'MS ƒSƒVƒbƒN'";
+	c.font="bold 20px'MS Gothic'";
 	
 	my_power=0;
 	enemy_power=0;
@@ -118,8 +118,8 @@ function draw(is_started)
 	
 	if(is_started)
 	{
-		c.fillText("‚ ‚È‚½‚Ì“¾“_"+my_city+"@@‚ ‚È‚½‚Ìí—Í: "+parseInt(my_power),20,H+20,400);
-		c.fillText("‘Šè‚Ì“¾“_"+enemy_city+"@@@‘Šè‚Ìí—Í: "+parseInt(enemy_power),20,H+45,400);
+		c.fillText("ã‚ãªãŸã®å¾—ç‚¹"+my_city+"ã€€ã€€ã‚ãªãŸã®æˆ¦åŠ›: "+parseInt(my_power),20,H+20,400);
+		c.fillText("ç›¸æ‰‹ã®å¾—ç‚¹"+enemy_city+"ã€€ã€€ã€€ç›¸æ‰‹ã®æˆ¦åŠ›: "+parseInt(enemy_power),20,H+45,400);
 		var now_time=Date.now();
 		var less=seigen-(now_time-started_time);
 		if(parseInt(enemy_power)<=0)less=0;
@@ -131,7 +131,7 @@ function draw(is_started)
 			draw(0);
 			return;
 		}
-		var output="c‚èŠÔ: ";
+		var output="æ®‹ã‚Šæ™‚é–“: ";
 		output+=(parseInt(less/600000)%10);
 		output+=(parseInt(less/60000)%10);
 		output+=":";
@@ -149,12 +149,12 @@ function draw(is_started)
 	}
 	else if(is_end==1)
 	{
-		c.fillText("‚¨”æ‚ê—l‚Å‚µ‚½B",20,H+20,400);
-		c.fillText("‚ ‚È‚½‚Ì“¾“_"+my_city+"@@‚ ‚È‚½‚Ìí—Í: "+parseInt(my_power),20,H+45,400);
-		c.fillText("‘Šè‚Ì“¾“_"+enemy_city+"@@@‘Šè‚Ìí—Í: "+parseInt(enemy_power),20,H+70,400);
+		c.fillText("ãŠç–²ã‚Œæ§˜ã§ã—ãŸã€‚",20,H+20,400);
+		c.fillText("ã‚ãªãŸã®å¾—ç‚¹"+my_city+"ã€€ã€€ã‚ãªãŸã®æˆ¦åŠ›: "+parseInt(my_power),20,H+45,400);
+		c.fillText("ç›¸æ‰‹ã®å¾—ç‚¹"+enemy_city+"ã€€ã€€ã€€ç›¸æ‰‹ã®æˆ¦åŠ›: "+parseInt(enemy_power),20,H+70,400);
 	}
 	else
 	{
-		c.fillText("ƒXƒy[ƒXƒL[‚ğ‰Ÿ‚µ‚ÄƒXƒ^[ƒgI",20,H+30,400);
+		c.fillText("ã‚¹ãƒšãƒ¼ã‚¹ã‚­ãƒ¼ã‚’æŠ¼ã—ã¦ã‚¹ã‚¿ãƒ¼ãƒˆï¼",20,H+30,400);
 	}
 }
