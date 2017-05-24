@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<HTML lang="ja">
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=utf_8">
+<script src="../canvaslib.js"></script>
+<script src="fragment.js"></script>
+<script src="data.js"></script>
+<script src="draw.js"></script>
+<script src="make.js"></script>
+<script src="change_data.js"></script>
+<script src="event.js"></script>
+<TITLE>編集画面</TITLE>
+</HEAD>
+<BODY>
+<noscript>
+このページはJavaScriptを使用しております。JavaScriptを有効にしてください。
+</noscript>
+自己責任のもとご利用ください。<br>
+バグがないようには気を付けていますが、あったらごめんなさい。<br>
+注意として、あまり近くに二つの拠点を配置しないほうがよいです。<br>
+あと、あまり道路が変に交わらないほうがよいです。<br>
+<form name="edit">
+左右方向の長さ:<input type="text" name="W" value="600"><br>
+上下方向の長さ:<input type="text" name="H" value="467"><br>
+　　　背景画像:<input type="text" name="img" value="map.png"><br>
+　　自分の戦力:<input type="text" name="mp" value="1200000"><br>
+　　　敵の戦力:<input type="text" name="ep" value="1800000"><br>
+　制限時間(秒):<input type="text" name="tl" value="1500"><br>
+<input type="button" value="基本データを設定" onclick="change_data()"><br>
+　生成されたリンク:<input type="text" name="rr" value="">
+<input type="button" value="リンクを開く" onclick="if(document.edit.rr.value!=''){window.open(document.edit.rr.value);}"><br>
+</form>
+<canvas id="cvs"></canvas>
+<script src="init.js"></script>
+</BODY>
+</div>
+</HTML>

@@ -1,0 +1,38 @@
+function make()
+{
+	var ret="https://namonakiacc.github.io/t1/index.html#";
+	ret+="W="+W.toString();
+	ret+="&H="+H.toString();
+	ret+="&mp="+mp.toString();
+	ret+="&ep="+ep.toString();
+	ret+="&tl="+tl.toString()+"000";
+	ret+="&N="+N.toString();
+	ret+="&x=";
+	for(i=0;i<N;i++)
+	{
+		if(i>0)ret+=",";
+		ret+=xs[i].toString();
+	}
+	ret+="&y=";
+	for(i=0;i<N;i++)
+	{
+		if(i>0)ret+=",";
+		ret+=ys[i].toString();
+	}
+	ret+="&img="+encodeURIComponent(document.edit.img.value);
+	ret+="&f="+f;
+	ret+="&b="+b;
+	ret+="&sz=";
+	for(i=0;i<N;i++)
+	{
+		if(i>0)ret+=",";
+		ret+=sz[i].toString();
+	}
+	ret+="&r=";
+	for(i=0;i<r1.length;i++)
+	{
+		if(i>0)ret+=",";
+		ret+=r1[i].toString()+","+r2[i].toString();
+	}
+	document.edit.rr.value=ret;
+}
